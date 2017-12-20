@@ -336,19 +336,9 @@ def main():
   # Extract a Subgraph for Fewer Computations
   subgraph,subedge = Get_Subgraph(S_Node, D_Node, orig_graph, 2)
 
-  #thread2 = Thread(target=press_continue,args=(plt,))
-  #thread2.start()
-  #ox.plot.plot_graph_color(G, [subedge], [S_Node, D_Node], fig_height=50, fig_width=50, edge_color = 'grey', annotate=True)
-  #thread2.join()
-
   # Apply Region Devider
   Region_List = Region_Divider(S_Node, 3, subgraph)
   
-  #thread3 = Thread(target=press_continue,args=(plt,))
-  #thread3.start()
-  #ox.plot.plot_graph_color(G, Region_List, [S_Node, D_Node], fig_height=50, fig_width=50, edge_color = 'grey', annotate=True)
-  #thread3.join()
-
   # Load Prediction Model
   Model_List = Load_Regression_Model()
 
@@ -363,11 +353,6 @@ def main():
     for edges in Region_List[i]:
       update_list.append(edges)
     
-    #thread = Thread(target=press_continue,args=(plt,))
-    #thread.start()
-    #ox.plot.plot_graph_update(G, [update_list], [S_Node, D_Node], cost_dict, fig_height=50, fig_width=50, edge_color = 'grey', annotate=True)
-    #thread.join()
-
   # Perform Navigation on Updated Subgraph
   path_info = Navigation(S_Node, D_Node, subgraph)
   route = path_info.nodes
