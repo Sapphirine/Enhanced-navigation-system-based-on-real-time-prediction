@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 For iPath_UI:\
+\
+There are only two function in the class, which can generate form in \'91setupUi\'92 and add text information in form in retranslateUi. \
+\
+Call these two function directly and add some signals and slots sentences simply can realize interface.\
+\
+For iPath:\
+\
+There are many functions and some important parameters.\
+\
+1. iPath class generate a window simply, and start from process in roads.start() function.\
+\
+2. Class control realizes all basic drawing functions:\
+\
+(1)BoardWidth and BoardHeight can control the number of squares we draw, which means if we set them in a large number, they can simulate a line drawing on a map.\
+\
+(2)Speed controls refreshing frame rate.\
+\
+(3)squareWidth and squareHeight return the region we need to paint for one square.\
+\
+(4)shapeAt return the square\'92s place, we can set the place by setShapeAt\
+\
+(5)start and initControl initiate the class, while clearBoard can clear all squares into blank.\
+\
+(6)timerEvent and paintEvent is automatically running in the backend, they realize drawing of line and map.\
+\
+(7)drawRoad tells paintEvent how to paint what we need, we also set color in this function.\
+\
+(8)newGraph can help us generate map and line, it gives every square its own color, which can realize a effectiveness like drawing picture, so we can use this to draw our guide line in map.\
+\
+(9)The class road sets three kind of squares and blank condition\
+\
+3. Class shape realizes the shape defined in class road, coordsTable is the shape\'92s coordinate form.\
+\
+4. Class Map is where data should input, just initiate a simple map here to test. In practice, this data should be read from our navigation\'92s output.\
+  \
+\
+}
